@@ -1,0 +1,96 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/main.css')
+  link(href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  title Testy
+.container-fluid
+  .container
+    nav.navbar.navbar-expand-lg.navbar-light.arkaPlan
+      a.navbar-brand(href='#')
+        img(src='https://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016' alt='')
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link.mt-2(style='color: #B8B6B4' href='#')
+              | MA&Gbreve;AZA
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link.mt-2(style='color: #B8B6B4' href='#') TOPLULUK
+          li.nav-item
+            a.nav-link.mt-2(style='color: #B8B6B4' href='#') #{profile.nickname}
+          li.nav-item
+            a.nav-link.mt-2(style='color: #B8B6B4' href='#') SOHBET
+          li.nav-item
+            a.nav-link.mt-2(style='color: #B8B6B4' href='#') DESTEK
+.col-md-4
+.container
+  .media
+    #resim
+      img.align-self-center.mr-3.mt-4.ml-4.cerceve(src=`${profile.profileimage}` alt=`${profile.nickname}`)
+    .media-body
+      h5#nickname.mt-5.text-light
+        | #{profile.nickname} 
+        span
+          i.fas.fa-caret-down
+      span#adsoyad(style='color: #4F4B5A;')
+        span.mr-2 #{profile.name}
+        img(src=`${profile.flag}` alt=`${profile.country}`)
+        span.ml-2 #{profile.country}
+      p#about-1.mt-5.text-light Benim hakk&imath;mda bilgi tamam&imath;yla burada
+      p#about-2.text-light Daha fazla bilgi al
+    .media-body
+      button#editBtn.buton.text-light(type='submit') Profili D&uuml;zenle
+      .level.text-light
+        h5
+          | Seviye 
+          span#level.ml-4.dot.text-justify-center.sayi(style='border-color: #D95B43;') #{profile.level}
+      .level-duzenle.text-light
+        span#arttir
+          button.btn.btn-success(type='submit') +
+  #edit.edit
+    form
+      h5.text-light S&uuml;ren ba&scedil;lad&imath;..
+      h5#yuz
+      hr
+      .progress
+        #islem.progress-bar(style='width:60%')
+      .col-md-6.text-light
+        .form-group
+          label(for='formGroupExampleInput') Nickname de&gbreve;i&scedil;tir
+          input#yeniNick.form-control(type='text' placeholder='Yeni nickname girin')
+        .form-group
+          label Ad&imath;n&imath; de&gbreve;i&scedil;tir
+          input#yeniAd.form-control(type='text' placeholder='Yeni adı girin')
+        .form-group
+          label Hakk&imath;nda 1.k&imath;s&imath;m
+          input#yeni-About-1.form-control(type='text' placeholder='Yeni oluştur')
+        .form-group
+          label(for='formGroupExampleInput') Hakk&imath;nda 2.k&imath;s&imath;m
+          input#yeni-About-2.form-control(type='text' placeholder='Yeni oluştur')
+        .form-group
+          label(for='exampleInputPassword1') Password
+          input#sifre.form-control(type='password' placeholder='Password')
+        button#kaydet.btn.btn-primary(type='submit') Kaydet
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+script(src='https://kit.fontawesome.com/a87f16e663.js')
+script(src='/js/app.js')

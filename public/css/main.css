@@ -1,0 +1,100 @@
+.container-fluid{
+    background-color: #171A21;
+    height: 102px;
+}
+
+.renk {
+    color: blue;
+}
+body{
+    background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/639900/816bbd36dcf636b0bd75607d56c3e8e5215a6a09.jpg);
+    background-repeat:repeat;
+}
+.media{
+    background-color: #272D3B;
+    height: 250px;
+}
+.cerceve{
+    border: #52A2C2;
+    border-style: solid;
+   
+}
+
+
+.buton{
+    margin-top: 185px;
+    margin-left: 150px;
+    background-color: #313F55;
+    border-radius: 2px;
+    padding: 1px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #212121;
+    /* background: -webkit-linear-gradient( top, #7a8494 5%, #282f3d 95%);
+    background: linear-gradient( to bottom, #7a8494 5%, #282f3d 95%); */
+    font-size: 25px;
+    
+}
+  
+/* .edit{
+    background-color: #14110C;
+    opacity: 50px;
+    margin: 555px;
+} */
+.edit{
+    margin: auto;
+    /* position: static; */
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    z-index: 1;
+    background-color: #171717;
+    opacity: .85;
+    filter: alpha(opacity=85);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+.level{
+    margin-top:-185px;
+    margin-left: 150px;
+
+}
+.dot {
+    border: solid white 2px;
+
+    /* background-color: #bbb; */
+    border-radius: 50%;
+    display: inline-block;
+    /* text-align: center; */
+    /* display: inline-block;
+    font-size: 16px;
+    border-radius: 16px; */
+    /* border-top-color: white;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial; */
+    height: 38px;
+    width: 38px;
+    line-height: 32px;
+    text-align: center;
+
+  }
+  .level-duzenle{
+      margin-top: 25px;
+      margin-left: 210px;
+      
+  }

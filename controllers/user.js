@@ -27,28 +27,29 @@ exports.getProfile = (req, res, next) => {
                 // Level Find
                 const levelObject = $(".friendPlayerLevelNum");
                 var level = levelObject.html();
-                if (level == null || level == undefined){
-                    var level = "";
+                if (level == null || level == undefined) {
+                    var level = 0;
                 }
-                else{
+                else {
                     var level = levelObject.html();
                 }
                 // Real Name Find
                 const nameObject = $("bdi");
                 var name = nameObject.html();
-                if (name == null){
+                if (name == null) {
                     name = ""
                 }
-                else{
+                else {
                     var name = nameObject.html();
                 }
                 // Country Find
                 const flagObject = $(".header_real_name");
                 var flag = flagObject.html();
-                if (flag == undefined) {
+                // console.log(flag.split(" ")[2])
+                // console.log(flag)
+                if ((flag == null || flag.split(" "))[2] == undefined) {
                     var flagIcon = "";
                     var flagCountry = "";
-
                 }
                 else {
                     var flag2 = flag.split('src="')[1];
@@ -67,15 +68,22 @@ exports.getProfile = (req, res, next) => {
                 // Status Find
                 const statusObject = $(".responsive_status_info");
                 var status = statusObject.html();
-              
-                if (status.split("<")[1].includes("offline")) {
-                    var statusMain = "offline"
+                if (status == null) {
+                    var statusMain = "";
                 }
                 else {
-                    var statusMain = "online"
+                    if (status.split("<")[1].includes("offline")) {
+                        var statusMain = "offline"
+                    }
+                    else {
+                        var statusMain = "online"
+                    }
+
                 }
 
-                
+
+
+
 
                 // Friend Count Find
                 // const friendCountObject = $(".profile_count_link_total").children().last();

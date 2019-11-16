@@ -61,18 +61,15 @@ exports.getProfile = (req, res, next) => {
                 // Status Find
                 const statusObject = $(".responsive_status_info");
                 var status = statusObject.html();
-                if (status == null) {
-                    var statusMain ="";
+              
+                if (status.split("<")[1].includes("offline")) {
+                    var statusMain = "offline"
                 }
                 else {
-                    if (status.split("<")[1].includes("offline")) {
-                        var statusMain = "offline"
-                    }
-                    else {
-                        var statusMain = "online"
-                    }
-
+                    var statusMain = "online"
                 }
+
+                
 
                 // Friend Count Find
                 // const friendCountObject = $(".profile_count_link_total").children().last();

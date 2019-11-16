@@ -105,8 +105,8 @@ exports.getProfile = (req, res, next) => {
                             const savedProfile = new Checker();
                             savedProfile.profileurl = userName;
                             savedProfile.level = level;
-                            savedProfile.nickname = nickName;
-                            savedProfile.name = name;
+                            savedProfile.nickname = nickName.replace(/[\u0800-\uFFFF]/g, '');
+                            savedProfile.name = name.replace(/[\u0800-\uFFFF]/g, '');
                             savedProfile.profileimage = profileImage;
                             savedProfile.status = statusMain;
                             savedProfile.flag = flagIcon;
@@ -127,8 +127,8 @@ exports.getProfile = (req, res, next) => {
                                     const savedProfile = new Checker();
                                     savedProfile.profileurl = userName;
                                     savedProfile.level = level;
-                                    savedProfile.nickname = nickName;
-                                    savedProfile.name = name;
+                                    savedProfile.nickname = nickName.replace(/[\u0800-\uFFFF]/g, '');
+                                    savedProfile.name = name.replace(/[\u0800-\uFFFF]/g, '');
                                     savedProfile.profileimage = profileImage;
                                     savedProfile.status = statusMain;
                                     savedProfile.flag = flagIcon;

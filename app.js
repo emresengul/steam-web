@@ -14,6 +14,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(userRoutes)
 
 
-app.listen(PORT || 8080 , () => {
+app.listen(PORT , () => {
     console.log("Port: 3000")
 });

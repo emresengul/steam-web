@@ -37,7 +37,7 @@ exports.getProfile = (req, res, next) => {
                 const nameObject = $("bdi");
                 var name = nameObject.html();
                 if (name == null) {
-                    name = ""
+                    name = "test";
                 }
                 else {
                     var name = nameObject.html();

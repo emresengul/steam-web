@@ -51,7 +51,7 @@ exports.getProfile = (req, res, next) => {
                     var flagIcon = "";
                     var flagCountry = "";
                 }
-                else if(flag.split(" "))[2] == undefined){
+                else if(flag.split(" ")[2] == undefined){
                     var flagIcon = "";
                     var flagCountry = "";
                 }

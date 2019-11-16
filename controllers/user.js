@@ -27,6 +27,12 @@ exports.getProfile = (req, res, next) => {
                 // Level Find
                 const levelObject = $(".friendPlayerLevelNum");
                 var level = levelObject.html();
+                if (level == null || level == undefined){
+                    var level = "";
+                }
+                else{
+                    var level = levelObject.html();
+                }
                 // Real Name Find
                 const nameObject = $("bdi");
                 var name = nameObject.html();

@@ -24,6 +24,7 @@ exports.getProfile = (req, res, next) => {
                 // Nickname find
                 const siteTitleObject = $(".actual_persona_name");
                 var nickName = siteTitleObject.html();
+                // console.log(typeof nickName)
                 // Level Find
                 const levelObject = $(".friendPlayerLevelNum");
                 var level = levelObject.html();
@@ -32,12 +33,14 @@ exports.getProfile = (req, res, next) => {
                 }
                 else {
                     var level = levelObject.html();
+                    console.log(level)
                 }
                 // Real Name Find
                 const nameObject = $("bdi");
                 var name = nameObject.html();
+                console.log(name)
                 if (name == null) {
-                    name = "test";
+                    var name = " ";
                 }
                 else {
                     var name = nameObject.html();
@@ -47,11 +50,7 @@ exports.getProfile = (req, res, next) => {
                 var flag = flagObject.html();
                 // console.log(flag.split(" ")[2])
                 // console.log(flag)
-                if (flag == null) {
-                    var flagIcon = "";
-                    var flagCountry = "";
-                }
-                else if(flag.split(" ")[2] == undefined){
+                if ((flag == null || flag.split(" "))[2] == undefined) {
                     var flagIcon = "";
                     var flagCountry = "";
                 }
